@@ -5,7 +5,8 @@ include develop.env
 
 .PHONY: build
 build:
-	go build  -v -o $(BINARY) ./cmd
+	go build -mod=vendor -v -o $(BINARY) ./cmd
+
 
 .PHONY: run
 run: ## Compile and run locally
